@@ -16,7 +16,7 @@ Predicting whether a hotel booking will be canceled, using the [Hotel Booking De
 ### Target Distribution
 The dataset is imbalanced: ~63% not canceled vs ~37% canceled — why F1/ROC-AUC are used to rank models instead of raw accuracy.
 
-
+![Target Distribution](images/target_distribution.png)
 
 ### Correlation Heatmap
 `deposit_type_Non Refund`, `lead_time`, and `room_mismatch` show the strongest relationships with cancellation.

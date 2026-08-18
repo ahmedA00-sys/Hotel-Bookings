@@ -16,17 +16,17 @@ Predicting whether a hotel booking will be canceled, using the [Hotel Booking De
 ### Target Distribution
 The dataset is imbalanced: ~63% not canceled vs ~37% canceled — why F1/ROC-AUC are used to rank models instead of raw accuracy.
 
-![Target Distribution](images/target_distribution.png)
+<img width="558" height="470" alt="image" src="https://github.com/user-attachments/assets/c10ed881-69d4-4264-ace9-b228c8442ed7" />
 
 ### Correlation Heatmap
 `deposit_type_Non Refund`, `lead_time`, and `room_mismatch` show the strongest relationships with cancellation.
 
-![Correlation Heatmap](images/correlation_heatmap.png)
+<img width="2021" height="1790" alt="image" src="https://github.com/user-attachments/assets/324a269c-5954-4546-bfee-16761a167fd3" />
 
 ### Feature Importance (Random Forest)
 `lead_time`, `country_encoded`, and `total_of_special_requests` are the top predictors.
 
-![Feature Importance](images/feature_importance.png)
+<img width="962" height="701" alt="image" src="https://github.com/user-attachments/assets/02ba1a4f-862c-46dc-92f0-00d3bf38b773" />
 
 ## Model Results
 
@@ -47,13 +47,13 @@ The dataset is imbalanced: ~63% not canceled vs ~37% canceled — why F1/ROC-AUC
 Random Forest was tuned via `RandomizedSearchCV` (`n_estimators`, `max_depth`, `min_samples_split`, `min_samples_leaf`; 6 candidates × 2-fold CV, optimizing F1). It improved F1 from 0.679 → 0.699 over the untuned baseline, but its train/test accuracy gap widened to 7.1 percentage points — a mild overfitting signal worth keeping in mind next to XGBoost's 1.1-point gap.
 
 ### Model Comparison
-![Model Comparison](images/model_comparison.png)
+<img width="1391" height="590" alt="image" src="https://github.com/user-attachments/assets/7a7b94e8-7e7e-4778-9c8a-6575e6d32298" />
 
 ### Train vs Test Accuracy (Overfitting Check)
-![Train vs Test Accuracy](images/train_vs_test_accuracy.png)
+<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/256ff3a5-295e-4e72-b636-8520deb56d78" />
 
 ### Confusion Matrices
-![Confusion Matrices](images/confusion_matrices.png)
+=<img width="1670" height="790" alt="image" src="https://github.com/user-attachments/assets/e9480857-2798-45b8-840f-d5a54c51e712" />
 
 ## Repo Structure
 
